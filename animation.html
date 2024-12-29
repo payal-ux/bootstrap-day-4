@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .logo {
+            color: red;
+            animation-name: bounce;
+            position: relative;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;  
+        }
+
+    
+
+        .color-changing-animation {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: change-color;
+            animation-duration: 4s;
+            animation-iteration-count: infinite; 
+        }
+
+        @keyframes change-color {
+            from {
+                background-color: rgb(255, 0, 0);
+            }
+            to {
+                background-color: green;
+            }
+        }
+
+
+        .multiple-color-changing-animation {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation-name: change-color-multiple;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes change-color-multiple {
+            0% {
+                background-color: blue;
+            }
+            50% {
+                background-color: orange;
+            }
+            100% {
+                background-color: blue;
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        
+    
+
+    .new-collection {
+        width: 100px;
+            height: 100px;
+            background-color: purple;
+            animation-name: change-color-new-collection;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+
+    }
+    .new-collection {
+            text-align: center;
+            animation-name: change-color-new-collection;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+    @keyframes change-color-new-collection {
+            0% {
+                background-color: red;
+                color: white;
+            }
+            25% {
+                background-color: blue;
+                color: yellow;
+            }
+            50% {
+                background-color: green;
+                color: black;
+            }
+        }
+         .new-collection:before {
+            content:"";
+            width:4px;
+            height:40px;
+            background-color:red;
+            position:absolute;
+            transform: translateX(-15px);
+         }
+         
+
+    </style>
+</head>
+<body>
+    <h1>Color changing animation</h1>
+    <div class="color-changing-animation"></div>
+    <br>
+    <div class="multiple-color-changing-animation"></div> 
+    <h1 class="logo">Attire</h1>
+
+    <h1 class="new-collection">New collection</h1>
+
+</body>
+</html>
